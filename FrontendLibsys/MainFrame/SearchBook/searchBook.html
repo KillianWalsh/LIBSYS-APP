@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Titel</title>
+  
+    <link rel="stylesheet" href="Searchbook.css" />
+</head>
+
+<body onload="checkOutTitle()">
+<div class="Headerdiv" id="Headerdiv">
+    <h1 class="Header">Search for your book!</h1>
+    <div class="Maintext">
+        <input type="radio" name="Search" id="TitleCheck"> 
+        <label for="Title">Title</label>
+        <input type="radio" name="Search" id="AuthorCheck">
+        <label for="Author">Author</label>
+        <input type="radio" name="Search" id="GenreCheck">
+        <label for="Genre">Genre</label>
+    </div>
+</div>
+
+<div class="inputclass" id="inputclass">
+    <input class="searchinput" type="text" id="SearchInput" name="name" />
+    <input
+            class="inputbutton"
+            type="button"
+            onclick="renderData()"
+            value="Search"
+    />
+</div>
+
+<div class="container" id="container">
+    <table>
+        <tbody id="TableBody">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Publisher</th>
+                <th>Publicationdate</th>
+                <th>Isbn</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="iframeDiv" id="iframeDiv">
+    <button class="BackButton" id="BackButton" onclick="clearTable(document.getElementById('LoanTableBody'));toggleIFrame()">Back</button>
+    <div class="Headerdiv">
+        <h1 class="Header">Book details</h1>
+      </div>
+  
+      <div class="Infodiv">
+        <div class="descriptiondiv">
+          <img
+            class="bookimage"
+            src="https://kbimages1-a.akamaihd.net/fe01223c-992a-42c3-9a44-46461f84badd/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg"
+            alt=""
+          />
+          
+  
+          <div class="infotable">
+            <table>
+                <tbody class="InfotableBody">
+                  <tr>
+                      <td class="InfotableDesc">Title</td>
+                      <td id="titlevalue"></td>
+                    </tr>
+                  <tr>
+                      <td class="InfotableDesc">Genre</td>
+                      <td id="genrevalue"></td>
+                    </tr>
+                    <tr>
+                      <td class="InfotableDesc">Author</td>
+                      <td id="authorvalue"></td>
+                    </tr>
+                    <tr>
+                      <td class="InfotableDesc">Publicationdate</td>
+                      <td id="datevalue"></td>
+                    </tr>
+                    <tr>
+                      <td class="InfotableDesc">ISBN</td>
+                      <td id="ISBNvalue"></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="paragraph">
+              <p>Here is some space for a description</p>
+            </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <table>
+          <tbody id="LoanTableBody">
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Status</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <br>
+
+      <h2>Your recommendations:</h2>
+      <div class="RecommendedBooks">
+        <div class="Slide1" id="Slide1">
+          <div class="Book" onclick="populateData(document.getElementById('BookTitle1').value)">
+            <img src="" alt="bookimage here">
+            <div class="BookTitle" id="BookTitle1" ></div>
+          </div>
+          <div class="Book" onclick="populateData(document.getElementById('BookTitle2').value)">
+            <img src="https://kbimages1-a.akamaihd.net/fe01223c-992a-42c3-9a44-46461f84badd/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg" alt="bookimage here">
+            <div class="BookTitle"  id="BookTitle2" ></div>
+          </div>
+          <div class="Book" onclick="populateData(document.getElementById('BookTitle3').value)">
+            <img src="https://kbimages1-a.akamaihd.net/fe01223c-992a-42c3-9a44-46461f84badd/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg" alt="bookimage here">
+            <div class="BookTitle"  id="BookTitle3" ></div>
+          </div>
+        </div>
+  
+        <div class="Slide2" id="Slide2" onclick="populateData(document.getElementById('BookTitle4').value)">
+          <div class="Book">
+            <img src="https://i.ebayimg.com/images/g/KCkAAOSw3v5YsFfB/s-l400.jpg" alt="bookimage here">
+            <div class="BookTitle" id="BookTitle4" ></div>
+          </div>
+          <div class="Book" onclick="populateData(document.getElementById('BookTitle5').value)">
+            <img src="https://i.ebayimg.com/images/g/KCkAAOSw3v5YsFfB/s-l400.jpg" alt="bookimage here">
+            <div class="BookTitle" id="BookTitle5" ></div>
+          </div>
+          <div class="Book" onclick="populateData(document.getElementById('BookTitle6').value)">
+            <img src="https://i.ebayimg.com/images/g/KCkAAOSw3v5YsFfB/s-l400.jpg" alt="bookimage here">
+            <div class="BookTitle" id="BookTitle6"></div>
+          </div>
+        </div>
+        <a class="prev" id="prev" onclick="prev()">&#10094;</a>
+        <a class="next" id= "next" onclick="next()" >&#10095;</a>
+        
+      </div>
+  
+      <p id="SecretSave"></p>
+  
+   
+</div>
+
+<div class="WishList" id="WishList">
+    <h1>Didn't find your book?</h1>
+    <h3>Let us know what you want to read and we will do our best to add it to our library!</h3>
+
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" id="TitleInput"></td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" id="AuthorInput"></td>
+        </tr>
+        <tr>
+            <td>ISBN:</td>
+            <td><input type="text" id="ISBNInput"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="saveWish()">Submit</button></td>
+        </tr>
+    </table>
+</div>
+
+<div class="Thanks" id="Thanks">
+    <h3>Thank you for your suggestion!</h3>
+</div>
+
+<p class="SecretSave" id="SecretSave"></p>
+
+<script src="searchbook.js"></script>
+</body>
+</html>

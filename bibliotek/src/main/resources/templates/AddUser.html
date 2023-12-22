@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link th:href="@{/css/AddUser.css}" href="../static/css/AddUser.css" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="AddUserPanel">
+    <h2>Skriv in dina personuppgifter:</h2>
+    <div class="InputPair">
+        <label for="Name" id="Name">Förenamn:</label>
+        <input type="text" id="NameText" placeholder="Förnamn">
+    </div>
+
+    <div class="InputPair">
+        <label for="SurName" id="SurName">Efternamn:</label>
+        <input type="text" id="SurNameText" placeholder="Efternamn">
+    </div>
+
+    <div class="InputPair">
+        <label for="Email" id="Email">Mejl:</label>
+        <input type="text" id="EmailText" placeholder="namn@exempel.se">
+    </div>
+
+    <div class="InputPair">
+        <label for="PersonNummer" id="PersonNummer">Personnummer:</label>
+        <input type="text" id="PersonNummerText" placeholder="YYYYMMDD-XXXX">
+    </div>
+
+    <hr>
+
+    <div class="InputPair">
+        <label for="Password" id="Password">Lösenord:</label>
+        <input type="password" id="PasswordText" placeholder="eXempel1">
+    </div>
+
+    <div class="InputPair">
+        <label for="PasswordVerify" id="PasswordVerify">Bekräfta lösenordet:</label>
+        <input type="password" id="PasswordVerifyText" placeholder="eXempel1">
+    </div>
+    <button class="Create" onclick="saveUser()">Registrera</button>
+
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{/js/AddUser.js}"></script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link th:href="@{/css/LoginUser.css}" href="../static/css/LoginUser.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Login</h1>
+<form id="LoginForm" name='form' th:action="@{/LoginUser}" method='POST'>
+    <table>
+        <tr>
+            <td>Mejl:</td>
+            <td><input type='text' name='username' value='' autocomplete="current-email" style="display : block"/></td>
+        </tr>
+        <tr>
+            <td>Lösenord:</td>
+            <td><input type='password' name='password' autocomplete="current-password" style="display: block"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="submitCell"><input id="submit" name="submit" type="submit" value="Logga in"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en, sv">
+<head>
+
+    <link rel="stylesheet" th:href="@{/css/userRegistration.css}" href="../static/css/userRegistration.css">
+    <link rel="stylesheet" th:href="@{/css/popup.css}" href="../static/css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<!--<form onsubmit="openPopup()">-->
+<!--<form onclick="openPopup()">-->
+<form>
+
+    <div class="AddUserPanel">
+        <h2>Registrering LIBSYS</h2>
+        <h2>Var vänlig och fyll i fälten:</h2>
+
+        <div class="InputPair">
+            <label for="Name" id="Name">Namn:</label>
+            <label for="NameText">
+            </label><input type="text" id="NameText" minlength="1" required pattern="[a-zåäöA-ZÅÄÖ]"
+                           placeholder="Förnamn">
+        </div>
+
+        <div class="InputPair">
+            <label for="SurName" id="SurName">Efternamn:</label>
+            <input type="text" id="SurNameText" minlength="1" required pattern="[a-zåäöA-ZÅÄÖ]" placeholder="Efternamn">
+        </div>
+
+        <div class="InputPair">
+            <label for="Email" id="Email">E-Mail:</label>
+            <input type="email" id="EmailText" minlength="8" required placeholder="namn@exempel.se">
+        </div>
+
+        <div class="InputPair">
+            <label for="PersonNummer" id="PersonNummer">Personnummer:</label>
+            <input type="text" id="PersonNummerText" required pattern="[0-9]{8}-[0-9]{4}" placeholder="YYYYMMDD-XXXX">
+        </div>
+        <!--    <div class="InputPair">-->
+        <!--        <label for="PersonNummer" id="PersonNummer">Personal Identity Number:</label>-->
+        <!--        <input type="text" id="PersonNummerText" placeholder="YYYYMMDD-XXXX">-->
+        <!--    </div>-->
+
+        <div class="InputPair">
+            <label for="Password" id="Password">Lösenord:</label>
+            <input type="password" id="PasswordText" required placeholder="eXempel1"
+                   pattern="(?=.*\d)(?=.*[a-zåäöü])(?=.*[A-ZÅÄÖÜ]).{8,}" autocomplete="on">
+        </div>
+        <!--    <div class="InputPair">-->
+        <!--        <label for="Password" id="Password" >Password:</label>-->
+        <!--        <input type="password" id="PasswordText" placeholder="eXempel1">-->
+        <!--    </div>-->
+
+        <div class="InputPair">
+            <label for="PasswordVerify" id="PasswordVerify">Bekräfta Lösenord:</label>
+            <input type="password" id="PasswordVerifyText" required placeholder="eXempel1"
+                   pattern="(?=.*\d)(?=.*[a-zåäöü])(?=.*[A-ZÅÄÖÜ]).{8,}" autocomplete="on">
+        </div>
+        <!--    <div class="InputPair">-->
+        <!--        <label for="PasswordVerify" id="PasswordVerify" >Verify Password:</label>-->
+        <!--        <input type="password" id="PasswordVerifyText" placeholder="eXempel1">-->
+        <!--    </div>-->
+        <!--        <button class="Create" onclick="registerUser()">Register</button>-->
+        <!--    <button class="Create" onclick="openPopup()">Register</button>-->
+        <!--    <button class="Create" onclick="openPopup()" type="button">Register</button>-->
+        <!--    <button class="Create" onclick="openPopup()" type="onsubmit">Register</button>-->
+        <!--    <button class="Create" onsubmit="openPopup()">Register</button>-->
+        <!--    <button class="Create" type="button" onclick="isFilled();">Register</button>-->
+        <button class="Create" type="button" onclick="check()">Registrera</button>
+        <!--    <button class="Create" type="button" onclick="isValidated();">Register</button>-->
+        <!--    <button class="Create" type="button" onclick="openPopup();">Register</button>-->
+        <!--    <button class="Create" type="submit" onclick="openPopup();">Register</button>-->
+        <!--    <button class="Create" type="submit" onsubmit="openPopup();">Register</button>-->
+        <!--    <button class="Create" type="submit" onsubmit="popup.classList.add('open-popup');">Register</button>-->
+        <!--    <button class="Create" type="submit" onsubmit="document.getElementById('popup')">Register</button>-->
+        <!--        <input  type="submit" value="Register" onsubmit="openPopup()">-->
+        <!--        <input type="submit" value="Register" >-->
+        <!--        <input type="button" value="Register" onsubmit="openPopup()">-->
+        <!--        <input type="submit" value="Register" onclick="openPopup();">-->
+
+    </div>
+</form>
+
+<!--<form>-->
+<div class="popup" id="popup">
+    <img src="https://support.bankid.com/assets/bankid/sakerhet/identifiering.png">
+    <h2>Tack så mycket!</h2>
+    <p>Verifiera med BankID</p>
+    <button type="button" onclick="registerUser(); closePopup(); ">Legitimera</button>
+</div>
+<!--</form>-->
+
+<script>
+
+    let popup = document.getElementById("popup");
+    // if (nameCheck() === true){
+    //     console.log("true")
+    // }
+    // if (nameCheck() === false){
+    //     console.log("false")
+    // }
+
+    function openPopup() {
+        // if (validatePersonNumber()){
+        popup.classList.add("open-popup")
+        // }
+
+        // if (passwordVerifier() === true
+        //     && emailValidation() === true
+        //     && nameCheck() === true
+        //     && validatePersonNumber() === true
+        //     // && validatePersonNumber(document.getElementById("PersonNummerText")) === true)
+        //     && validatePersonNumber() === true) {
+        //     popup.classList.add("open-popup");
+        // }
+
+    }
+
+    function closePopup() {
+        popup.classList.remove("open-popup");
+    }
+
+</script>
+<script type="text/javascript" th:src="@{/js/userRegistration.js}"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body {
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+}
+
+.ContactInfoBox {
+    background-color: var(--Color-Text);
+    font-family: 'Radio Canada', sans-serif;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 10px;
+
+}
+
+.ContactInfoBox p {
+    margin: auto;
+}
+
+.OpeningHours {
+    background-color: var(--Color-Text);
+    font-family: 'Radio Canada', sans-serif;
+    width: 50%;
+    height: 50%;
+    margin: 10px auto;
+    padding: 10px;
+
+}

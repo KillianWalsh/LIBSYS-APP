@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/WishListAdmin.css}" href="../static/css/WishListAdmin.css">
+</head>
+<body onload="renderData()">
+<div class="TableDiv">
+    <table>
+        <tbody id="tableBody">
+        <tr>
+            <td class="buttonCell">
+                <button class="printer" onclick="window.print()">Skriva ut</button>
+            </td>
+            <td class="buttonCell">
+                <button class="deleteButton" onclick="">Radera allt</button>
+            </td>
+        </tr>
+        <tr>
+            <th>Titel</th>
+            <th>Författare</th>
+            <th>ISBN</th>
+            <th>Antal önskat</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script th:src="@{/js/WishListAdmin.js}"></script>
+</html>

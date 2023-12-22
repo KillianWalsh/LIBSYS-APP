@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+.body {
+    background-color: var(--Color-Text);
+    color: var(--Color-Text);
+}
+
+.saveBookPanel {
+    background-color: var(--Color-Text);
+    margin: auto;
+    width: 30%;
+    height: 500px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+
+.input-group {
+    background-color: var(--Color-Text);
+    margin: auto;
+    margin-top: 50px;
+    width: 40%;
+    height: 450px;
+    text-align: center;
+    padding: 10px;
+    font-family: inherit;
+    display: block;
+    align-items: flex;
+}
+
+.saveBookPanel h2 {
+    font-family: 'Radio Canada', sans-serif;
+    margin-bottom: 40px;
+}
+
+.saveBookPanel .InputPair {
+    margin-top: 10px;
+    display: block;
+    padding: 10px;
+}
+
+.saveBookPanel .InputPair label {
+    float: left;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.saveBookPanel .InputPair input {
+    position: relative;
+    float: right;
+    height: 20px;
+    font-size: 18px;
+    font-family: inherit;
+    text-align: center;
+    width: inherit;
+    margin-right: 10px;
+}
+
+.saveBookPanel .InputPair select {
+    position: relative;
+    float: right;
+    height: 20px;
+    font-size: 14px;
+    font-family: inherit;
+    text-align: right;
+    width: inherit;
+    margin-right: 10px;
+}
+
+.saveBookPanel hr {
+    position: relative;
+    top: 2%;
+    width: 80%;
+}
+
+.saveBookPanel button {
+    float: right;
+    position: relative;
+    margin-top: 50px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Border)
+}
+
+.saveBookPanel button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.error {
+    border: 2px solid red;
+}

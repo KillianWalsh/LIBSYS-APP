@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+:root{
+    --Color-Title-Div:#192231;
+    --Color-Important-Text:#eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body{
+    width: auto;
+    text-align: left;
+}
+
+.Title{
+    background-color: var(--Color-Title-Div);
+    border-bottom: var(--Color-Border) solid 5px;
+    /*was on 80*/
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    float: center;
+    margin:auto;
+}
+
+.Title h1{
+    color: var(--Color-Important-Text);
+    font-size: 80px;;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.Title h3{
+    color: var(--Color-Text);
+    font-size: 15px;
+    text-align: right;
+    position: relative;
+    bottom: 80px;
+    right: 5px;
+    font-family: 'Radio Canada', sans-serif;
+
+}
+
+.NavigationBar{
+    background-color: var(--Color-Highlights);
+    margin: auto;
+    /*was on 90*/
+    width: 90%;
+    height:  40px;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.NavigationBar a{
+    color: var(--Color-Text);
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    font-size: 20px;
+    font-family:'Radio Canada', sans-serif;
+    display: inline-block;
+}
+
+.NavigationBar .Menu{
+    width: 100px;
+    height:40px;
+    font-size: 20px;
+    font-family:'Radio Canada', sans-serif;
+    background-color: var(--Color-Title-Div);
+    border: none;
+    color: var(--Color-Important-Text);
+    display: inline-block;
+}
+
+.NavigationBar .Menu:hover{
+    opacity: 0.5;
+}
+
+.dropdown{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+#ButtonDiv{
+    width: 200px;
+    height: 200px;
+    opacity:0;
+    top: -100%;
+    display: none;
+}
+
+.dropdown:hover #ButtonDiv{
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 2px;
+    overflow: hidden;
+    opacity: 1;
+    -webkit-transition: all 1s, -webkit-transform 1s;
+    transition: all 1s, transform 1s;
+    top:0;
+    position: absolute;
+    display: block;
+}
+
+
+ #ButtonDiv button{
+    background-color: var(--Color-Highlights);
+    width: 100%;
+    height: calc(100%/4);
+    margin:1px auto;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    color: var(--Color-Text);
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+#ButtonDiv .Logout{
+    background-color: rgb(139, 45, 45);
+    width: 100%;
+    height: calc(100%/4);
+    margin:1px auto;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    color: var(--Color-Text);
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+    display: none;
+}
+
+#ButtonDiv button:hover{
+    background-color: #404a42;
+}
+
+#ButtonDiv .Logout:hover{
+    background-color: rgb(83, 26, 26);
+}
+
+.NavigationBar .AdminButton{
+    display: none;
+
+}
+
+.NavigationBar a:hover{
+    opacity: 0.5;
+}
+
+#UserProfilButton{
+    display: none;
+    color: var(--Color-Text);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family:'Radio Canada', sans-serif;
+}
+
+.Welcome{
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+iframe{
+    height:700px;
+    /*was on 80*/
+    width: 99%;
+
+}
+
+:disabled{
+    opacity: 0.4;
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+:root{
+    --Color-Title-Div:#192231;
+    --Color-Important-Text:#eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+.body{
+    background-color: var(--Color-Text);
+    color: var(--Color-Text);
+}
+
+.AddUserPanel{
+    background-color: var(--Color-Text);
+    margin: auto;
+    margin-top: 50px;
+    width: 30%;
+    height: 450px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Radio Canada', sans-serif;
+    display: block;
+    align-items: flex;
+    
+}
+
+
+.AddUserPanel h2{
+    font-family: 'Radio Canada', sans-serif;
+    margin-bottom: 40px;
+}
+
+.AddUserPanel .InputPair{
+    margin-top: 10px;
+    display: block;
+    padding: 10px;
+    
+}
+
+.AddUserPanel .InputPair label{
+    float: left;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.AddUserPanel .InputPair input{
+    position: relative;
+    float: right;
+    height: 20px;
+    font-size: 18px;
+    font-family: inherit;
+    text-align: center;
+    width: inherit;
+    margin-right: 10px;
+    
+}
+
+.AddUserPanel hr{
+    position: relative;
+    top: 2%;
+    width: 80%;
+}
+
+ .AddUserPanel button{
+    float: right;
+    position: relative;
+    margin-top: 50px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Border)
+}
+
+.AddUserPanel button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.error {
+    border:2px solid red;
+  }

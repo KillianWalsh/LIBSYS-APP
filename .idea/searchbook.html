@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Titel</title>
+
+    <style>
+        img {
+            width: 300px;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Sök efter bok</h1>
+<p>Skriv in titeln på boken du söker, klicka sedan på "Sök"</p>
+<div>
+    <label for="title name">Titel:</label>
+    <input
+            type="text"
+            id="title name"
+            name="name"
+            required
+            minlength="4"
+            maxlength="50"
+            size="25"
+    />
+</div>
+
+<div>
+    <input type="button" onclick="myFunction()" value="Sök" />
+    <script>
+        function myFunction() {
+            document.getElementById("searchbook.js").submit();
+        }
+    </script>
+    <div class="container"></div>
+    <script src="searchbook.js"></script>
+</div>
+
+<img src="images/Books.jpeg" alt="Books on top of books" />
+
+<a href="">Boklista</a>
+</body>
+</html>

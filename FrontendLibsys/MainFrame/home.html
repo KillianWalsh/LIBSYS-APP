@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="Title">
+            <h1>Libsys</h1>
+            <h3>by Niklas², Stefan, Killian and Lisa</h3>
+            <br>
+         </div>
+ 
+         <div class="NavigationBar">
+
+             <div class="dropdown">
+                <button class="Menu">Login</button>
+                    <div id="ButtonDiv">
+                        <button id="AdminLoginButton" onclick="hideLoginDivAdmin()">Login IT-Admin</button>
+                        <button id="LibrarianLoginButton" onclick="hideLoginDivAdmin()">Login Librarian</button>
+                        <button id="UserLoginButton" onclick="hideLoginDivUser()">Login User</button>
+                    
+                        <button class="Logout" id="LogoutButton" onclick="logout()">Logout</button>
+                    </div>
+             </div>
+    
+                <a href=".\News\news.html" target="iFrameHome" onclick="showIFrame()">Home</a>
+                <a href=".\News\news.html" target="iFrameHome" onclick="showIFrame()">Information</a>
+                <a href=".\Contact\contact.html"onclick="ContactButton(),UserNavBarButton()" target="iFrameHome">Contact</a>
+                <a href=".\SearchBook\searchBook.html" target="iFrameHome"  onclick="UserNavBarButton()">Catalog</a>
+                <a href=".\RoomBooking\RoomBooking.html" target="iFrameHome"   class="AdminButton" onclick="AdminNavBarButton()">Bookings</a>
+                <!--Change the button for userProfil so it only shows when logged in-->
+                <a href=".\UserProfil\UserProfil.html" target="iFrameHome"  onclick="UserNavBarButton()" id="UserProfilButton">Your profile</a>
+                <a href=".\AddUser\AddUser.html" target="iFrameHome" class="AdminButton" onclick="AdminNavBarButton()">Add User</a>
+                <a href=".\SaveBook\saveBook.html" target="iFrameHome" class="AdminButton" onclick="AdminNavBarButton()">Add Book</a>
+                <a href=".\SearchUser\SearchUser.html" target="iFrameHome" class="AdminButton" onclick="AdminNavBarButton()">Find User</a>
+                <a href=".\WishList\WishListAdmin.html" target="iFrameHome" class="AdminButton" onclick="AdminNavBarButton()">Wishlist</a>
+        
+             
+          </div>
+         
+         <!--maybe change something here for the new spring-web-securtity login-->
+         
+          
+             <iframe id="iFrame" src=".\News\news.html" name= "iFrameHome" frameborder="0"></iframe>
+     
+    </body>
+    <script src="home.js"></script>
+</html>

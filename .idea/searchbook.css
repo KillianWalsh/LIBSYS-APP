@@ -1,0 +1,24 @@
+img {
+    width: 300px;
+    float: left;
+    margin-right: 50px;
+}
+
+.Header{
+
+    color: black;
+
+}
+
+.inputdiv{
+    background-color: white;
+    border-radius: 100px;
+    width: 20%;
+}
+
+.bookimage{
+
+    border-radius: 5px;
+
+}
+

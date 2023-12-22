@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+:root{
+    --Color-Title-Div:#192231;
+    --Color-Important-Text:#eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+.WishList{
+    background-color: var(--Color-Text);
+    margin: auto;
+    font-family: 'Radio canada', 'sans-serif';
+    text-align: center;
+    width: 60%;
+}
+
+table{
+    margin: auto;
+    text-align: left;
+}
+
+
+button{
+width: 100px;
+height: 40px;
+font-family: 'Radio Canada', sans-serif;
+font-size: 20px;
+background-color: var(--Color-Highlights);
+border: none;
+color: var(--Color-Border);
+float: right;
+}
+
+button:hover{
+opacity: 0.8;
+cursor: pointer;
+}
+
+.Thanks{
+    font-family:'Radio Canada', sans-serif;
+    display: none;
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+:root{
+    --Color-Title-Div:#192231;
+    --Color-Important-Text:#eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+body{
+    text-align: center;
+}
+
+.UserInfo{
+    width: 80%;
+    font-family: 'Radio Canada', sans-serif;
+    margin: auto;
+}
+
+h1{
+    font-family: 'Radio Canada', sans-serif;
+    margin: auto;
+}
+
+img{
+    margin: auto;
+    width: 150px;
+    height: 160px;
+}
+
+table{
+    width: fit-content;
+    text-align: left;
+    margin:auto;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.desc{
+    border: none;
+    width: 150px;
+    background-color: white;
+}
+
+td{
+    width: 200px;
+    background-color: var(--Color-Text);
+}
+
+#EMailCell input{
+    width: 200px;
+    height: 20px;
+}
+
+.buttonTd{
+    border: none;
+    background-color: white;
+    width: fit-content;
+}
+.submitButton{
+    width: 100px;
+    height: 25px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Border);
+}
+
+.submitButton:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.saveButton{
+    width: 100px;
+    height: 25px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Border);
+    display: none;
+    
+}
+
+.saveButton:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.Loan{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    text-align: center;
+    background-color: white;
+    
+}
+
+.BookList{
+    width: 100%;
+    text-align: center;
+    font-family: 'Canada Radio', sans-serif;
+}
+
+.BookList th{
+    width: 150px;
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+    font-family: 'Radio Canada', sans-serif;
+    text-align: center;
+
+}
+
+.ExtendButton{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+    background-color: var(--Color-Important-Text);
+    border: none;
+    color: var(--Color-Border);
+}
+
+.ExtendButton:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+

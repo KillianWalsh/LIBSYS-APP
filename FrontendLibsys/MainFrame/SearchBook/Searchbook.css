@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+:root{
+    --Color-Title-Div:#192231;
+    --Color-Important-Text:#eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body{
+    overflow: auto;
+    height: 800px;
+}
+
+img {
+    width: 300px;
+    float: left;
+    margin-right: 50px;
+    margin: auto;
+}
+
+.Headerdiv{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.Header{
+
+    font-family: "Radio Canada", sans-serif;
+
+
+}
+
+.Maintext{
+
+    font-family: 'Radio Canada', sans-serif;
+    background-color: var(--Color-Text);
+    width: 50%;
+    margin: auto;
+}
+
+.Maintext label{
+    margin-right: 15px;
+   
+}
+
+.inputclass{
+
+    text-align: center;
+    margin: auto;
+    font-family: 'Radio Canada',sans-serif;
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.inputclass .searchinput{
+    height: 25px;
+    width: 300px;
+    font-size: 20px;
+}
+
+.inputclass .inputbutton{
+
+    background-color: var(--Color-Highlights);
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    border: none;
+    color: var(--Color-Border);
+
+}
+
+.inputclass .inputbutton:hover{
+
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.container{
+    font-family: 'Radio Canada',sans-serif;
+    margin: auto;
+    width: 80%;
+}
+
+.container table{
+    width: 100%;
+}
+
+.container table th{
+
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+    font-size: 20px;
+}
+
+.container table td{
+
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 15px;
+    border-bottom: 2px dotted var(--Color-Text);
+
+
+}
+
+
+
+.inputdiv{
+    background-color: var(--Color-Text);
+    border-radius: 100px;
+    width: 1%;
+}
+
+.bookimage{
+
+    border-radius: 5px;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Important-Text);
+    border: none;
+    color: var(--Color-Border);
+    float: right;
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.iframeDiv{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: none;
+    text-align: center;
+}
+
+.iframeDiv iframe{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.BackButton{
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Title-Div);
+    border: none;
+    color: var(--Color-Important-Text);
+}
+
+.BackButton:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.SecretSave{
+    display: none;
+}
+
+.WishList{
+    background-color: var(--Color-Text);
+    margin: auto;
+    font-family: 'Radio Canada', 'sans-serif';
+    text-align: center;
+    width: 60%;
+}
+
+table{
+    margin: auto;
+    text-align: left;
+}
+
+
+.WishList button{
+width: 100px;
+height: 40px;
+font-family: 'Radio Canada', sans-serif;
+font-size: 20px;
+background-color: var(--Color-Highlights);
+border: none;
+color: var(--Color-Border);
+float: right;
+}
+
+.WishList button:hover{
+opacity: 0.8;
+cursor: pointer;
+}
+
+.Thanks{
+    font-family:'Radio Canada', sans-serif;
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+.Headerdiv{
+
+    margin: auto;
+    width: 50%;
+    text-align: center;
+
+
+}
+
+.Header{
+
+    font-family: "Radio Canada", sans-serif;
+    background-color: var(--Color-Highlights);
+
+
+}
+
+.Maintext{
+
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.Infodiv{
+ display: inline-block;
+ width: 100%;
+
+}
+
+.infotable{
+    float: left;
+    width: 20%;
+    height: 500px;
+    margin: 0 auto;
+    margin-left: 10px;
+}
+
+.infotable table{
+    width: 100%;
+}
+
+.infotable td{
+    width: 50%;
+    text-align: left;
+    font-family: 'Radio Canada', sans-serif;
+    border-bottom: 2px solid var(--Color-Text);
+}
+
+.paragraph{
+    text-align: center;
+    width: 20%;
+    height: 250px;
+    float: left;
+    font-family: "Radio Canada", sans-serif;
+    margin-left: 10px;
+}
+
+
+.Infodiv .descriptiondiv .bookimage{
+    display: inline-block;
+    border-radius: 5px;
+    width: 150px;
+    height: 250px;
+    margin-right: 10px;
+    
+}
+
+.descriptiondiv{
+    margin: auto;
+    width: 100%;
+    height: 250px;
+    float: right;
+}
+
+
+
+.container{
+    font-family: 'Radio Canada',sans-serif;
+    margin: auto;
+   
+    width: 80%;
+}
+
+.container table{
+    width: 80%;
+    margin: 15px auto;
+    
+}
+
+.container table th{
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+    font-size: 20px;
+    width: 25%;
+}
+
+.container td{
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 15px;
+    border-bottom: 2px dotted var(--Color-Border);
+}
+
+
+
+.inputdiv{
+    background-color: var(--Color-Text);
+    border-radius: 100px;
+    width: 1%;
+}
+
+.bookimage{
+    border-radius: 5px;
+    float: left;
+    margin-left: 200px;
+    height: 100px;
+    width: 100px;
+
+}
+
+.InfotableDesc{
+    font-weight: bold;
+}
+
+.container button{
+    width: 75px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Important-Text);
+    border: none;
+    color: var(--Color-Border);
+    margin-left: 20px;
+}
+
+.container button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.RecommendedBooks{
+    width: 80%;
+    height: 350px;
+    border: 2px solid var(--Color-Text);
+    border-radius: 5px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.Slide1{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    transition: all 1s;
+    transform: translateX(0%);
+}
+
+.Slide2{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.Book{
+    width: calc(80%/3);
+    height: 95%;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    background-color: var(--Color-Text);
+    overflow: hidden;
+}
+
+.Book img{
+    height: 90%;
+    width: 200px;
+    background: var(--Color-Highlights);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.Book:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.BookTitle{
+    margin:10px auto;
+    font-family: 'Radio Canada', sans-serif;
+    display: inline-block;
+    overflow-wrap: break-word ;
+    width: 100px;
+    font-weight: bold;
+
+}
+
+ h2{
+    margin: auto;
+    left: 40%;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  top: 40%;
+  text-align: center;
+  color: var(--Color-Highlights);
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev{
+    left:0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+.prev:hover,
+.next:hover{
+    background-color: #404a42;
+    opacity: 0.5;
+}
+
+#SecretSave{
+    display: none;
+}

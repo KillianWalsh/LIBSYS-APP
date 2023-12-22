@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body {
+    width: auto;
+    text-align: left;
+}
+
+.Title {
+    background-color: var(--Color-Title-Div);
+    border-bottom: var(--Color-Border) solid 5px;
+    /*was on 80*/
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    float: center;
+    margin: auto;
+}
+
+.Title h1 {
+    color: var(--Color-Important-Text);
+    font-size: 80px;;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.Title h3 {
+    color: var(--Color-Text);
+    font-size: 15px;
+    text-align: right;
+    position: relative;
+    bottom: 80px;
+    right: 5px;
+    font-family: 'Radio Canada', sans-serif;
+
+}
+
+.NavigationBar {
+    background-color: var(--Color-Highlights);
+    margin: auto;
+    /*was on 90*/
+    width: 90%;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.NavigationBar a {
+    color: var(--Color-Text);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+    display: inline-block;
+    width: fit-content;
+    overflow: auto;
+}
+
+#LogoutButton {
+    color: rgb(139, 45, 45);
+}
+
+.NavigationBar .AdminButton {
+    display: none;
+
+}
+
+.NavigationBar a:hover {
+    opacity: 0.5;
+}
+
+#UserProfilButton {
+    display: none;
+    color: var(--Color-Text);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.Welcome {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+
+iframe {
+    height: 700px;
+    /*was on 80*/
+    width: 99%;
+
+}
+
+:disabled {
+    opacity: 0.4;
+}

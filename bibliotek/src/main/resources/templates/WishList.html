@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--This was already inserted on search book and is no longer in use as well als wishlist.css and wishlist.js-->
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/WishList.css}" href="../static/css/WishList.css">
+</head>
+<body>
+<div class="WishList">
+    <h1>Didn't find your book?</h1>
+    <h3>Let us know what you want to read and we will do our best to add it to our library!</h3>
+
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" id="TitleInput"></td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" id="AuthorInput"></td>
+        </tr>
+        <tr>
+            <td>ISBN:</td>
+            <td><input type="text" id="ISBNInput"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="saveWish()">Submit</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="Thanks" id="Thanks">
+    <h3>Thank you for your suggestion!</h3>
+</div>
+</body>
+<script th:src="@{/js/WishList.js}"></script>
+</html>

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Radio Canada', sans-serif;
+    margin: auto;
+    float: center;
+}
+
+#BookButton {
+    width: 200px;
+    height: 50px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 40px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Text);
+    margin-top: 10px;
+}
+
+#CancelButton {
+    width: 200px;
+    height: 50px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 40px;
+    background-color: rgb(139, 45, 45);
+    border: none;
+    color: var(--Color-Text);
+    margin-top: 10px;
+}
+
+.CancelBooking {
+    width: 100px;
+    height: 25px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: rgb(139, 45, 45);
+    border: none;
+    color: var(--Color-Text);
+}
+
+#BookButton:hover, #CancelButton:hover, #SearchButton:hover, .CancelBooking:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.CancelDiv {
+    width: 80%;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+    display: none;
+}
+
+.SearchInput {
+    width: 40%;
+    margin: auto;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+.SearchInput td {
+    width: auto;
+}
+
+.SearchInput input {
+    width: fit-content;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#SearchButton {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 25px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Text);
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.InfoTable {
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.InfoTable th {
+    width: calc(100% / 4);
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+}
+
+.InfoTable td {
+    font-size: inherit;
+    font-family: inherit;
+    border-bottom: 2px dotted var(--Color-Text);
+}
+
+.Rooms {
+    width: 610px;
+    height: 400px;
+    margin: auto;
+    font-family: 'Radio Canada', sans-serif;
+    display: none;
+}
+
+.MainRoom {
+    border: 2px solid var(--Color-Border);
+    border-radius: 5px;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    float: left;
+}
+
+.MainRoom img {
+    width: 400px;
+    height: 400px;
+}
+
+.BookingRooms {
+    float: left;
+    width: 200px;
+    height: 400px;
+    text-align: left;
+}
+
+.Room {
+    width: 100%;
+    height: 50%;
+    padding-top: 1px;
+    padding-left: 1px;
+}
+
+.RoomButton {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--Color-Border);
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+    font-family: inherit;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+#Room1Button {
+    background-image: url("\Study1.png");
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+}
+
+#Room2Button {
+    background-image: url("..\\Images\\Study2.png");
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+}
+
+.RoomButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.BookingDiv {
+    width: 80%;
+    height: 300px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: inherit;
+    display: none;
+
+}
+
+.BackButtonRoom {
+    width: 100px;
+    height: 30px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Title-Div);
+    border: none;
+    color: var(--Color-Important-Text);
+    margin-top: 10px;
+    float: right;
+}
+
+.BackButtonRoom:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.BackButton {
+    width: 100px;
+    height: 30px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Title-Div);
+    border: none;
+    color: var(--Color-Important-Text);
+}
+
+.BackButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.ContinueButton {
+    width: 100px;
+    height: 30px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Text);
+    margin-left: 10px;
+}
+
+.ContinueButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.InputDiv {
+    width: 40%;
+    border: 10px solid var(--Color-Text);
+    border-radius: 5px;
+    margin: auto;
+    height: 150px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.InputDiv table {
+    background-color: white;
+    width: 100%;
+    height: 40px;
+}
+
+.InputDiv table td input {
+    width: 90%;
+    height: 100%;
+}
+
+.InputDiv .ButtonTd {
+    text-align: left;
+}
+
+.InputDiv table td {
+    text-align: left;
+    border-bottom: 2px dotted var(--Color-Text);
+}
+
+.CalenderDiv {
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    height: 400px;
+    margin: auto;
+    background-color: var(--Color-Text);
+    display: none;
+}
+
+/* some css taken from: https://medium.com/allenhwkim/how-to-build-a-calendar-widget-7cf397fe3de5*/
+
+.calendar {
+    width: 100%;
+    text-align: center;
+    height: 250px;
+    margin: auto;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.month, .year {
+    font-family: inherit;
+    font-size: 25px;
+}
+
+.calendar .week-days b {
+    font-family: inherit;
+    display: inline-block;
+    width: calc(100% / 7);
+    background-color: white;
+    border-color: var(--Color-Text);
+    font-size: 25px;
+}
+
+.calendar .days .thisMonths {
+    font-size: 20px;
+    font-family: inherit;
+    display: inline-block;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    background-color: var(--Color-Highlights);
+    border-color: var(--Color-Text);
+    color: var(--Color-Border);
+}
+
+.calendar .days #prevMonths, .calendar .days #nextMonths {
+    font-family: inherit;
+    font-size: 20px;
+    display: inline-block;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    background-color: var(--Color-Highlights);
+    opacity: 0.6;
+    border-color: var(--Color-Text);
+    color: var(--Color-Border);
+}
+
+.calendar .days #bookedDay {
+    font-family: inherit;
+    font-size: 20px;
+    display: inline-block;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    background-color: rgb(139, 45, 45);
+    opacity: 0.6;
+    border-color: var(--Color-Text);
+    color: black;
+}
+
+.calendar .days button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.MonthSelector p {
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.MonthSelector input {
+    font-size: 20px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+
