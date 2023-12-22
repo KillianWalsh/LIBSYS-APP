@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-securtity5">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Titel</title>
+
+    <link th:href="@{/css/Searchbook.css}" href="../static/css/Searchbook.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body onload="checkOutTitle()">
+<div class="Headerdiv" id="Headerdiv">
+    <h1 class="Header">Hitta din bok!</h1>
+    <div class="Maintext">
+        <input type="radio" name="Search" id="TitleCheck">
+        <label for="Title">Titel</label>
+        <input type="radio" name="Search" id="AuthorCheck">
+        <label for="Author">Författare</label>
+        <input type="radio" name="Search" id="GenreCheck">
+        <label for="Genre">Genre</label>
+    </div>
+</div>
+
+<div class="inputclass" id="inputclass">
+    <input class="searchinput" type="text" id="SearchInput" name="name"/>
+    <input
+            class="inputbutton"
+            type="button"
+            onclick="renderData()"
+            value="Sök"
+    />
+</div>
+
+<div class="container" id="container">
+    <table>
+        <tbody id="TableBody">
+        <tr>
+            <th>Titel</th>
+            <th>Författare</th>
+            <th>Genre</th>
+            <th>Förlag</th>
+            <th>Utgiven</th>
+            <th>ISBN</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="iframeDiv" id="iframeDiv">
+    <button class="BackButton" id="BackButton"
+            onclick="clearTable(document.getElementById('LoanTableBody'));toggleIFrame()">Tillbaka
+    </button>
+    <div class="Headerdiv">
+        <h1 class="Header">Detaljer</h1>
+    </div>
+
+    <div class="Infodiv">
+        <div class="descriptiondiv">
+            <img
+                    class="bookimage"
+                    src="https://kbimages1-a.akamaihd.net/fe01223c-992a-42c3-9a44-46461f84badd/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg"
+                    alt=""
+            />
+
+
+            <div class="infotable">
+                <table>
+                    <tbody class="InfotableBody">
+                    <tr>
+                        <td class="InfotableDesc">Titee</td>
+                        <td id="titlevalue"></td>
+                    </tr>
+                    <tr>
+                        <td class="InfotableDesc">Genre</td>
+                        <td id="genrevalue"></td>
+                    </tr>
+                    <tr>
+                        <td class="InfotableDesc">Författare</td>
+                        <td id="authorvalue"></td>
+                    </tr>
+                    <tr>
+                        <td class="InfotableDesc">Utgiven</td>
+                        <td id="datevalue"></td>
+                    </tr>
+                    <tr>
+                        <td class="InfotableDesc">ISBN</td>
+                        <td id="ISBNvalue"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="paragraph">
+                <p>Plats för att beskriva boken.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <table>
+            <tbody id="LoanTableBody">
+            <tr>
+                <th>ID</th>
+                <th>Titel</th>
+                <th>Status</th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <h2>Vi rekommenderar:</h2>
+    <div class="RecommendedBooks">
+        <div class="Slide1" id="Slide1">
+            <div class="Book" onclick="populateData(document.getElementById('BookTitle1').value)">
+                <img src="" alt="bookimage here">
+                <div class="BookTitle" id="BookTitle1"></div>
+            </div>
+            <div class="Book" onclick="populateData(document.getElementById('BookTitle2').value)">
+                <img src="https://kbimages1-a.akamaihd.net/fe01223c-992a-42c3-9a44-46461f84badd/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg"
+                     alt="bookimage here">
+                <div class="BookTitle" id="BookTitle2"></div>
+            </div>
+            <div class="Book" onclick="populateData(document.getElementById('BookTitle3').value)">
+                <img src="https://kbimages1-a.akamaihd.net/fe01223c-992a-42c3-9a44-46461f84badd/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg"
+                     alt="bookimage here">
+                <div class="BookTitle" id="BookTitle3"></div>
+            </div>
+        </div>
+
+        <div class="Slide2" id="Slide2" onclick="populateData(document.getElementById('BookTitle4').value)">
+            <div class="Book">
+                <img src="https://i.ebayimg.com/images/g/KCkAAOSw3v5YsFfB/s-l400.jpg" alt="bookimage here">
+                <div class="BookTitle" id="BookTitle4"></div>
+            </div>
+            <div class="Book" onclick="populateData(document.getElementById('BookTitle5').value)">
+                <img src="https://i.ebayimg.com/images/g/KCkAAOSw3v5YsFfB/s-l400.jpg" alt="bookimage here">
+                <div class="BookTitle" id="BookTitle5"></div>
+            </div>
+            <div class="Book" onclick="populateData(document.getElementById('BookTitle6').value)">
+                <img src="https://i.ebayimg.com/images/g/KCkAAOSw3v5YsFfB/s-l400.jpg" alt="bookimage here">
+                <div class="BookTitle" id="BookTitle6"></div>
+            </div>
+        </div>
+        <a class="prev" id="prev" onclick="prev()">&#10094;</a>
+        <a class="next" id="next" onclick="next()">&#10095;</a>
+
+    </div>
+
+    <p id="SecretSave"></p>
+
+
+</div>
+
+<div class="WishList" id="WishList">
+    <h1>Du hittade inte boken?</h1>
+    <h3>Berätta vad det är som du vill läsa och vi ge vårt bästa att hitta det för dig!</h3>
+
+    <table>
+        <tr>
+            <td>Titel:</td>
+            <td><input type="text" id="TitleInput"></td>
+        </tr>
+        <tr>
+            <td>Författare:</td>
+            <td><input type="text" id="AuthorInput"></td>
+        </tr>
+        <tr>
+            <td>ISBN:</td>
+            <td><input type="text" id="ISBNInput"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="saveWish()">Tillsätta</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="Thanks" id="Thanks">
+    <h3>Tack ska du ha!</h3>
+</div>
+
+
+<script type="text/javascript" th:src="@{/js/Searchbook.js}"></script>
+</body>
+</html>

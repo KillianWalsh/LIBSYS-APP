@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/SearchUser.css}" href="../static/css/SearchUser.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="SearchFunction">
+    <form class="SearchBar">
+        <input type="text" class="SearchInput" id="searchInput">
+        <button type="button" class="SearchButton" id="SearchButton" onclick="renderData()">Sök</button>
+    </form>
+</div>
+<br>
+
+
+<div class="Profil" id="profil">
+
+    <div class="NameAndId" id="header">
+        <label for="Name" id="NameHeader"></label><br>
+        <label for="Id" id="IdHeader"></label>
+    </div>
+    <br>
+    <div class="ProfilPicture">
+        <img src="https://bkc.nu/wp-content/uploads/2016/07/profile-placeholder-300x300.png" alt="UserPicture">
+    </div>
+
+    <div class="Information">
+        <a href="placeHolder" id="UserMail"></a><br><br>
+        <label for="" id="SocialNumber"></label>
+    </div>
+
+
+    <div class="BookList">
+        <table>
+            <tbody id="BookListTableBody">
+            <tr>
+                <th>ID</th>
+                <th>Titel</th>
+                <th>Författare</th>
+                <th>Förelag</th>
+                <th>Lån</th>
+                <th>Lämna</th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+</body>
+<script th:src="@{/js/SearchUser.js}"></script>
+</html>

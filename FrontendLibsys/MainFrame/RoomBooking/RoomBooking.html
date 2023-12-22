@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="RoomBooking.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <h1 id="TitleText">What do you want to do?</h1>
+        <br>
+        <div class="DecisionDiv" id="DecisionDiv">
+            <button id="BookButton" onclick="showBooking()">Book</button>
+            <button id="CancelButton" onclick="showCancel()">Cancel</button>
+        </div>
+
+        <div class="CancelDiv" id="CancelDiv">
+            <table class="SearchInput">
+                <td>User ID:</td><td><input id="SearchInputField" type="text"></td>
+                <td><button id="SearchButton" onclick="fillTable()">Search</button></td>
+            </table>
+            <table class="InfoTable">
+                <tbody id="InfoTableBody">
+                    <tr><th>ID</th><th>Date</th><th>Room</th><th class="empty"></th></tr>
+                </tbody>
+            </table>
+            <button class="BackButtonRoom" onclick="backToBeginning()">Back</button>
+        </div>
+
+        <div class="Rooms" id="Rooms">
+            <div class="MainRoom">
+                <img src="..\Images\Library.png" alt="LibraryPicture">
+            </div>
+            <div class="BookingRooms" >
+                <div class="Room" id="Room1Div">
+                    <button class="RoomButton" id="Room1Button" onclick="setRoomNumber(1)">Study 1</button>
+                </div>
+                <div class="Room" id="Room2Div">
+                    <button class="RoomButton" id="Room2Button" onclick="setRoomNumber(2)">Study 2</button>
+                </div>
+            </div>
+            <br>
+            <button class="BackButtonRoom" onclick="backToBeginning()">Back</button>
+        </div>
+
+        <div class="CalenderDiv" id="CalenderDiv">
+            <!--Html taken from: https://medium.com/allenhwkim/how-to-build-a-calendar-widget-7cf397fe3de5-->
+            <div class="calendar" id="calender">
+                <span class="month" id="month"></span> <!-- month-->
+                <span class="year" id="year"></span> <!-- year -->
+                <div class="week-days" id="weed-days">
+                  <b>Su</b><b>Mo</b><b>Tu</b><b>We</b><b>Th</b><b>Fr</b><b>Sa</b>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+              <div class="MonthSelector">
+                <p>Select your month:</p>
+                <input type="month" 
+                  onchange="showCalendar((new Date(this.value)))" />
+              </div>
+            <!--Reference ends here-->
+            <br>
+            <button class="BackButton" onclick="backToRooms()">Back</button>
+        </div>
+
+        <div class="BookingDiv" id="BookingDiv">
+            <div class="InputDiv">
+                <table>
+                    <tr><td>Room:</td><td id="RoomTD"></td></tr>
+                    <tr><td>Day:</td><td id="DayTD"></td></tr>
+                    <tr><td>User ID:</td><td><input id="IdInput" type="text"></td></tr>
+                    <tr><td></td><td class="ButtonTd"><button class="BackButton" onclick="backToCalender()">Back</button><button class="ContinueButton" onclick="bookRoom()">Book</button></td></tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+    <script src="RoomBooking.js"></script>
+</html>

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body {
+    margin: auto;
+    text-align: center;
+}
+
+#LoginForm {
+    background-color: var(--Color-Text);
+    width: 30%;
+    height: 100px;
+    margin: auto;
+    padding: 30px;
+}
+
+#LoginForm table {
+    margin: auto;
+    text-align: left;
+}
+
+td {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 50px;
+}
+
+input {
+    font-family: inherit;
+    font-size: 15px;
+}
+
+#submit {
+    background-color: var(--Color-Highlights);
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+}
+
+#submit:hover {
+    opacity: 0.5;
+}
+
+#submitCell {
+    text-align: right;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-securtity5">
+<head>
+
+</head>
+<body>
+<p>test</p>
+<div sec:authorize="!isAuthenticated()">Text visible to everybody.</div>
+<div class="container" sec:authorize="isAuthenticated()">
+    <span sec:authentication="authorities"></span>
+    <span sec:authentication="principal.authorities"></span>
+    <div sec:authorize="hasAuthority('BORROWER')">Text visible to borrower.</div>
+    <div sec:authorize="hasAuthority('LIBRARIAN')">Text visible to librarian.</div>
+    <div sec:authorize="hasAuthority('ADMIN')">Text visible to admin.</div>
+</div>
+
+</body>
+</html>

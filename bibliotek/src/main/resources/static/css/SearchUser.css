@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+.SearchFunction {
+    background-color: var(--Color-Text);
+    margin: auto;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.SearchBar .SearchButton {
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Border)
+
+}
+
+.SearchBar .SearchInput {
+    height: 20px;
+    width: 200px;
+    margin-right: 20px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;;
+}
+
+.SearchBar .SearchButton:hover {
+    opacity: 0.5;
+}
+
+.Profil {
+    background-color: var(--Color-Text);
+    width: 80%;
+    height: 550px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Radio Canada', sans-serif;
+    overflow: auto;
+
+}
+
+.ProfilPicture img {
+    width: 300px;
+    height: 320px;
+    float: left;
+    margin-left: 10px;
+
+
+}
+
+.Information {
+    float: left;
+    text-align: left;
+    width: 57%;
+    margin-left: 20px;
+}
+
+.Information .AddressLabel {
+    font-size: 20px;
+}
+
+#NameHeader {
+    font-size: 40px;
+}
+
+#IdHeader {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.BookList {
+    width: 60%;
+    float: left;
+    height: 300px;
+    margin-left: 20px;
+    overflow: auto;
+    text-align: center;
+    background-color: white;
+
+}
+
+.BookList th {
+
+    width: 150px;
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+
+}
+
+#BookListTableBody td {
+    width: 150px;
+    border-bottom: 2px dotted var(--Color-Border);
+}
+
+.BookList .ColID .ColAuthor {
+    background-color: white;
+}
+
+
+.BookList table {
+    background-color: white;
+}

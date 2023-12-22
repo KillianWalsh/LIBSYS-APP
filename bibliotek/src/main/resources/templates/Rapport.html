@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/Rapport.css}" href="../static/css/Rapport.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" th:src="@{/js/Rapport.js}"></script>
+<body>
+<h1 class="Header">Bok status</h1>
+
+
+<p class="textdiv">Välj status:</p>
+<br>
+
+<div class="usertable">
+    <table>
+        <tbody>
+        <tr>
+            <th>Användare</th>
+            <th>Böcker</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="inputpair"><input class="borrowerbutton" type="radio" id="borrower" name="status"
+                                              value="borrower"/>
+                    <label for="2">Användare</label><br/>
+            </td>
+            <td>
+                <div class="inputpair"><input class="borrowedbutton" type="radio" id="borrowed" name="status"
+                                              value="notgood"/>
+                    <label for="3">Utlånad</label><br/>
+                    <div class="inputpair"><input class="instockbutton" type="radio" id="instock" name="status"
+                                                  value="good"/>
+                        <label for="1">tillgänglig</label><br/>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <button class="printbutton" onclick="window.print()">Skriv ut</button>
+            </td>
+            <td><input type="submit" value="Sök" onclick="renderData()" class="submitbutton"/></td>
+
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<div class="bookinformationtable" id="bookInformationTable">
+    <table>
+        <tbody id="bookTableBody">
+        <tr>
+            <th>ID</th>
+            <th>Titel</th>
+            <th>Status</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="userinformationtable" id="userInformationTable">
+    <table>
+        <tbody id="userTableBody">
+        <tr>
+            <th>ID</th>
+            <th>Förenamn</th>
+            <th>Efternamn</th>
+            <th>Mejl</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</form>
+</body>
+</html>

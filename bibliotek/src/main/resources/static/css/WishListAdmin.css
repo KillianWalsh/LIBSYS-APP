@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+body {
+    overflow: auto;
+}
+
+.TableDiv {
+    margin: auto;
+    width: 90%;
+    font-family: 'Canada Radio', sans-serif;
+    overflow: visible;
+}
+
+table {
+    width: 100%;
+    font-family: inherit;
+}
+
+th {
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+    font-family: inherit;
+    width: 25%;
+}
+
+.buttonCell {
+    text-align: left;
+    border: none;
+}
+
+td {
+    width: 25%;
+    text-align: center;
+    border-bottom: 2px dotted var(--Color-Text);
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    background-color: var(--Color-Highlights);
+    border: none;
+    color: var(--Color-Border)
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.deleteButton {
+    width: 100px;
+    height: 40px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 15px;
+    background-color: rgb(139, 45, 45);;
+    border: none;
+    color: var(--Color-Text)
+}

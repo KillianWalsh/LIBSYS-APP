@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-securtity5">
+<head>
+    <link rel="stylesheet" th:href="@{/css/Logout.css}" href="../static/css/Logout.css">
+</head>
+<body>
+<!--    <div sec:authorize="isAuthenticated()">-->
+<!--        <a th:href="@{/logout}">Logout</a>-->
+<!--    </div>-->
+<!--    <div sec:authorize="isAuthenticated()">-->
+<!--        <a href="javascript: document.logoutForm.submit()" class="dropdown-toggle">Sign out</a>-->
+<!--        <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">-->
+<!--            <input hidden type="submit" value="Sign Out" />-->
+<!--        </form>-->
+</div>
+<form id="LoginForm" name='form' th:action="@{/Logout}">
+    <div class="ThankYou">
+        <h1>Du lyckades logga ut!</h1>
+        <p>Tack att du använder vår tjänst!<br>Vi hoppas att du är snart tillbaka!</p>
+    </div>
+    <input type="submit">
+</form>
+<!--<div>-->
+<!--<li th:if="${#authorization.expression('isAuthenticated()')}">-->
+<!--    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">-->
+<!--        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout-->
+<!--    </a>-->
+<!--    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{logout}"></form>-->
+<!--</li>-->
+<!--</div>-->
+</body>
+
+</html>

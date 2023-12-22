@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/RoomBooking.css}" href="../static/css/RoomBooking.css" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1 id="TitleText">Vad ska du göra?</h1>
+<br>
+<div class="DecisionDiv" id="DecisionDiv">
+    <button id="BookButton" onclick="showBooking()">Boka</button>
+    <button id="CancelButton" onclick="showCancel()">Avboka</button>
+</div>
+
+<div class="CancelDiv" id="CancelDiv">
+    <table class="SearchInput">
+        <td>Användarens ID:</td>
+        <td><input id="SearchInputField" type="text"></td>
+        <td>
+            <button id="SearchButton" onclick="fillTable()">Sök</button>
+        </td>
+    </table>
+    <table class="InfoTable">
+        <tbody id="InfoTableBody">
+        <tr>
+            <th>ID</th>
+            <th>Datum</th>
+            <th>Rum</th>
+            <th class="empty"></th>
+        </tr>
+        </tbody>
+    </table>
+    <button class="BackButtonRoom" onclick="backToBeginning()">Tillbaka</button>
+</div>
+
+<div class="Rooms" id="Rooms">
+    <div class="MainRoom">
+        <img th:src="@{/Library.png}" alt="LibraryPicture">
+    </div>
+    <div class="BookingRooms">
+        <div class="Room" id="Room1Div">
+            <button class="RoomButton" id="Room1Button" onclick="setRoomNumber(1)"
+                    th:style="'background: url(/Study1.png); background-repeat: no-repeat;background-size: 200px 200px;'">
+                Study 1
+            </button>
+        </div>
+        <div class="Room" id="Room2Div">
+            <button class="RoomButton" id="Room2Button" onclick="setRoomNumber(2)"
+                    th:style="'background: url(/Study2.png); background-repeat: no-repeat;background-size: 200px 200px;'">
+                Study 2
+            </button>
+        </div>
+    </div>
+    <br>
+    <button class="BackButtonRoom" onclick="backToBeginning()">Tillbaka</button>
+</div>
+
+<div class="CalenderDiv" id="CalenderDiv">
+    <!--Html taken from: https://medium.com/allenhwkim/how-to-build-a-calendar-widget-7cf397fe3de5-->
+    <div class="calendar" id="calender">
+        <span class="month" id="month"></span> <!-- month-->
+        <span class="year" id="year"></span> <!-- year -->
+        <div class="week-days" id="weed-days">
+            <b>Su</b><b>Mo</b><b>Tu</b><b>We</b><b>Th</b><b>Fr</b><b>Sa</b>
+        </div>
+        <div class="days" id="days"></div>
+    </div>
+    <div class="MonthSelector">
+        <p>Väjl månaden:</p>
+        <input type="month"
+               onchange="showCalendar((new Date(this.value)))"/>
+    </div>
+    <!--Reference ends here-->
+    <br>
+    <button class="BackButton" onclick="backToRooms()">Tillbaka</button>
+</div>
+
+<div class="BookingDiv" id="BookingDiv">
+    <div class="InputDiv">
+        <table>
+            <tr>
+                <td>Rum:</td>
+                <td id="RoomTD"></td>
+            </tr>
+            <tr>
+                <td>Dag:</td>
+                <td id="DayTD"></td>
+            </tr>
+            <tr>
+                <td>Användarens ID:</td>
+                <td><input id="IdInput" type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="ButtonTd">
+                    <button class="BackButton" onclick="backToCalender()">Tillbaka</button>
+                    <button class="ContinueButton" onclick="bookRoom()">Boka</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{/js/RoomBooking.js}"></script>
+</html>

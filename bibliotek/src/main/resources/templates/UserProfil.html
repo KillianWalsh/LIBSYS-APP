@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<htmln xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/UserProfil.css}" href="../static/css/UserProfil.css">
+    </head>
+    <body onload="renderData()">
+    <h1>Your profile</h1>
+    <br>
+    <img src="https://bkc.nu/wp-content/uploads/2016/07/profile-placeholder-300x300.png" alt="Test"></img>
+    <br>
+    <div class="UserInfo">
+        <table>
+            <tbody>
+            <tr>
+                <td class="desc">ID:</td>
+                <td id="IDCell"></td>
+            </tr>
+            <tr>
+                <td class="desc">Namn:</td>
+                <td id="NameCell"></td>
+            </tr>
+            <tr>
+                <td class="desc">Personnummer:</td>
+                <td id="SocialNumberCell"></td>
+            </tr>
+            <tr>
+                <td class="desc">Mejl:</td>
+                <td id="EMailCell"><input type="text" id="emailInput" disabled></td>
+                <td class="buttonTd">
+                    <button class="submitButton" id="change" onclick="toggleButtons()">Byta</button>
+                    <button class="saveButton" id="save" onclick="toggleButtons(), updateEmail()">Save</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <div class="Loan">
+        <table class="BookList">
+            <tbody id="BookListTableBody">
+            <tr>
+                <th>ID</th>
+                <th>Titel</th>
+                <th>Författare</th>
+                <th>Förelag</th>
+                <th>Lån</th>
+                <th>Lämna</th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </body>
+    <script type="text/javascript" th:src="@{/js/UserProfil.js}"></script>
+</htmln>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <link rel="stylesheet" href="AddUser.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+
+
+         <div class="AddUserPanel">
+             <h2>Please add your information:</h2>
+             <div class="InputPair">
+                 <label for="Name" id="Name">Name:</label>
+                 <input type="text" id="NameText">
+             </div>
+
+             <div class="InputPair">
+                <label for="SurName" id="SurName">Surname:</label>
+                <input type="text" id="SurNameText">
+            </div>
+
+            <div class="InputPair">
+                <label for="Email" id="Email">E-Mail:</label>
+                <input type="text" id="EmailText">
+            </div>
+
+            <div class="InputPair">
+                <label for="PersonNummer" id="PersonNummer">Personnummer:</label>
+                <input type="text" id="PersonNummerText">
+            </div>
+
+            <hr>
+
+            <div class="InputPair">
+                <label for="Password" id="Password">Password:</label>
+                <input type="password" id="PasswordText">
+            </div>
+
+            <div class="InputPair">
+                <label for="PasswordVerify" id="PasswordVerify">Verify Password:</label>
+                <input type="password" id="PasswordVerifyText">
+            </div>
+            <button class="Create" onclick="saveUser()">Create</button>
+    
+         </div>
+    
+    </body>
+    <script src="AddUser.js"></script>
+</html>

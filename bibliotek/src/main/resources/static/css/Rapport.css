@@ -1,0 +1,174 @@
+:root {
+    --Color-Title-Div: #192231;
+    --Color-Important-Text: #eddbcd;
+    --Color-Text: #f4f4f4;
+    --Color-Border: #404a42;
+    --Color-Highlights: #c0b283;
+}
+
+.Header {
+
+    font-family: 'Radio Canada', sans-serif;
+    background-color: #c0b283;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+
+.bookheader {
+    display: inline-block;
+
+
+}
+
+.textdiv {
+    font-family: 'Radio Canada', sans-serif;
+    background-color: #c0b283;
+    width: 10%;
+    text-align: center;
+    border-radius: 5%;
+
+
+}
+
+.radiodiv {
+
+    margin: auto;
+    width: 80%;
+    border: 2px solid red
+}
+
+.inputpair {
+
+    display: inline-block;
+    width: 50%;
+}
+
+
+.usertable {
+
+    font-family: 'Radio Canada', sans-serif;
+    margin: auto;
+    margin-bottom: auto;
+    width: 80%;
+    background-color: var(--Color-Text);
+}
+
+.usertable table {
+
+    width: 100%;
+}
+
+.usertable table th {
+
+    background-color: var(--Color-Highlights);
+    color: var(--Color-Text);
+    font-size: 20px;
+}
+
+.usertable table td {
+
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 15px;
+    border-bottom: 2px dotted var(--Color-Text);
+
+
+}
+
+
+.userinformationtable {
+    display: none;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 70%;
+    background-color: #c0b283;
+    font-family: 'Radio Canada', sans-serif;
+
+}
+
+.userinformationtable th {
+    width: calc(100% / 4);
+    margin: auto;
+    color: var(--Color-Text);
+}
+
+.userinformationtable table {
+
+    width: 100%;
+
+}
+
+.userinformationtable tbody {
+
+    width: 100%;
+
+}
+
+.bookinformationtable {
+    display: none;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    background-color: #c0b283;
+    font-family: 'Radio Canada', sans-serif;
+
+
+}
+
+.bookinformationtable th {
+    width: calc(100% / 3);
+    margin: auto;
+    color: var(--Color-Text);
+}
+
+.bookinformationtable table {
+
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.bookinformationtable tbody {
+    width: 100%;
+}
+
+.submitbutton {
+    background-color: var(--Color-Highlights);
+    width: 100px;
+    height: 30px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    border: none;
+    color: var(--Color-Border);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.printbutton {
+
+    background-color: var(--Color-Highlights);
+    width: 100px;
+    height: 30px;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+    border: none;
+    color: var(--Color-Border);
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+.userinformationtable td {
+    background-color: white;
+    border-bottom: 2px dotted var(--Color-Text);
+    font-size: 20px;
+}
+
+.bookinformationtable td {
+
+    background-color: white;
+    border-bottom: 2px dotted var(--Color-Text);
+    font-size: 20px;
+}

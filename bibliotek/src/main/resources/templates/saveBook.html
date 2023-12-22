@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/saveBook.css}" href="../static/css/saveBook.css">
+    <title>Title</title>
+</head>
+<body>
+<form>
+
+    <div class="saveBookPanel">
+        <h2>Infoga bokens uppgifter:</h2>
+        <div class="InputPair">
+            <label for="Title" id="Title">Titel:</label>
+            <label for="TitleText">
+            </label><input type="text" id="TitleText" placeholder="Titel">
+        </div>
+
+        <div class="InputPair">
+            <label for="Author" id="Author">Författare:</label>
+            <label for="AuthorText">
+            </label><input type="text" id="AuthorText" placeholder="Författare">
+        </div>
+
+        <div class="InputPair">
+            <label for="Publisher" id="Publisher">Förelag:</label>
+            <label for="PublisherText"></label>
+            <input type="text" id="PublisherText" placeholder="Förlag">
+        </div>
+
+        <!--    <hr>-->
+
+        <div class="InputPair">
+            <label for="PublicationDate" id="PublicationDate">Utgiven:</label>
+            <label for="PublicationDateText">
+            </label><input type="text" id="PublicationDateText" placeholder="YYYY-MM-DD">
+        </div>
+
+        <div class="InputPair">
+            <label for="ISBN" id="ISBN">ISBN:</label>
+            <label for="ISBNText"></label>
+            <input type="text" id="ISBNText" placeholder="X-XXX-XXXXX-X">
+        </div>
+
+        <div class="InputPair">
+            <label for="Genre"> Genre: </label>
+            <br>
+            <select id="Genre" name="Genre">
+                <option value="CHILDREN_BOOKS">CHILDREN BOOKS</option>
+                <option value="PHILOSOPHY_AND_RELIGION">PHILOSOPHY AND RELIGION</option>
+                <option value="HISTORY">HISTORY</option>
+                <option value="LAW">LAW</option>
+                <option value="ARTS_AND_CULTURE">ARTS AND CULTURE</option>
+                <option value="BIOGRAPHY">BIOGRAPHY</option>
+                <option value="PSYCHOLOGY">PSYCHOLOGY</option>
+                <option value="DATA_AND_IT">DATA_AND_IT</option>
+                <option value="SCIENCE">SCIENCE</option>
+                <option value="YOUTH">YOUTH</option>
+                <option value="FICTIONAL">FICTIONAL</option>
+            </select>
+        </div>
+
+        <div class="InputPair">
+            <label for="BookStatus">Bok Status:</label>
+            <br>
+            <select id="BookStatus" name="BookStatus">
+                <option value="IN_STOCK">IN STOCK</option>
+                <option value="ONGOING_DELIVERY">ONGOING DELIVERY</option>
+                <option value="WHACKED">WHACKED</option>
+                <option value="RESERVED">RESERVED</option>
+                <option value="NOT_IN_STOCK">NOT IN STOCK</option>
+                <option value="MISSING">MISSING</option>
+                <option value="ON_LOAN">ON LOAN</option>
+            </select>
+        </div>
+
+        <button onclick="saveBook()" class="favorite styled" type="button"> Skapa</button>
+
+    </div>
+
+    <br>
+</form>
+
+<script th:src="@{/js/saveBook.js}"></script>
+</body>
+</html>
+
